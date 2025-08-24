@@ -794,6 +794,8 @@ class SpaceInvadersGame(QWidget):
                                self.mystery_ship_sprite)
 
         # Alien bullets
+        painter.setBrush(QColor("blue"))  # Or QColor(0, 0, 255)
+        painter.setPen(QColor("blue"))   
         for b in self.state.get('alien_bullets', []):
             painter.drawRect(b[0], b[1], 5, 15)
 
