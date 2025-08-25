@@ -162,7 +162,7 @@ class HighScores:
 
         @post The high scores list is updated and persisted to disk.
         """
-        self.scores.append({"initials": initials[:3].upper(), "score": score})
+        self.scores.append({"initials": initials.strip()[:3].upper(), "score": score})
         self.scores.sort(key=lambda x: x['score'], reverse=True)
         self.scores = self.scores[:10]
         self.save_scores()
